@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadghea1152-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadghea1152-tenant-component
+    app.kubernetes.io/part-of: loadghea1152-tenant-app
+  name: loadghea1152-tenant-component
+  namespace: loadghea1152-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadghea1152-tenant-component
+    weight: null
+status: {}
